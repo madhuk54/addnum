@@ -1,4 +1,3 @@
-package addnum;
 import java.util.Scanner;
 
 
