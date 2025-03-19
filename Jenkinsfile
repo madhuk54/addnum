@@ -7,18 +7,20 @@ pipeline {
     stages {
         stage('Clone from GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/madhuk54/jenkins.git'
+                git branch: 'main', url: 'https://github.com/madhuk54/addnum.git' 
             }
         }
         stage('Compile Java') {
             steps {
-                bat 'javac -d . addnum/Add.java'  
+                bat 'dir'  
+                bat 'javac -d . addnum/Add.java' 
             }
         }
         stage('Run Java Program') {
             steps {
-                bat "echo 5 10 | java addnum.Add"  
+                bat "java addnum.Add" 
             }
         }
     }
 }
+
