@@ -12,12 +12,12 @@ pipeline {
         }
         stage('Compile Java') {
             steps {
-                bat 'javac -d . addnum.java'  // ✅ Compiles Java file into the package directory
+                bat 'javac add.java'  // ✅ Compiles Java file into the package directory
             }
         }
         stage('Run Java Program') {
             steps {
-                bat "echo 5 10 | java addnum"  // ✅ Runs the program with input (Example: 5, 10)
+                bat "echo 5 10 | java add"  // ✅ Runs the program with input (Example: 5, 10)
             }
         }
     }
