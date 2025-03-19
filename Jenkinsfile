@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone from GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/madhuk54/addnum.git'
+                git branch: 'main', url: 'https://github.com/madhuk54/addnum.git',,credentialsId:"token"
             }
         }
         stage('Compile Java') {
